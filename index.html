@@ -131,6 +131,37 @@
       flex-shrink: 0;
     }
 
+    .add-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0 16px 16px;
+      padding: 9px 16px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      color: #555;
+      background: #f5f5f5;
+      border: 1px dashed #bbb;
+      border-radius: 6px;
+      cursor: pointer;
+      width: calc(100% - 32px);
+      justify-content: center;
+    }
+    .add-btn:hover { background: #eee; border-color: #888; color: #111; }
+
+    .remove-btn {
+      margin-left: auto;
+      background: none;
+      border: none;
+      font-size: 16px;
+      color: #bbb;
+      cursor: pointer;
+      padding: 0 2px;
+      line-height: 1;
+    }
+    .remove-btn:hover { color: #c00; }
+
     .card .field { grid-template-columns: 180px 1fr; }
     .card .label { padding: 10px 12px; }
     .card .input { padding: 8px 10px; }
@@ -197,175 +228,43 @@
       <div class="input"><input type="url" name="linkedin" /></div>
     </div>
 
-    <div class="group-label">Programmes — all 6 services</div>
+    <div class="group-label">Programmes</div>
 
-    <div class="card">
-      <div class="card-title"><div class="n">1</div>Cultural Intelligence</div>
-      <div class="field">
-        <div class="label">Duration</div>
-        <div class="input"><input type="text" name="ci_dur" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Format</div>
-        <div class="input"><div class="pills">
-          <label><input type="checkbox" name="ci_fmt" value="in-person" /><span>In person</span></label>
-          <label><input type="checkbox" name="ci_fmt" value="virtual" /><span>Virtual</span></label>
-          <label><input type="checkbox" name="ci_fmt" value="hybrid" /><span>Hybrid</span></label>
-        </div></div>
-      </div>
-      <div class="field">
-        <div class="label">Target audience</div>
-        <div class="input"><input type="text" name="ci_aud" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Pricing</div>
-        <div class="input"><input type="text" name="ci_price" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Full description</div>
-        <div class="input"><textarea class="tall" name="ci_desc"></textarea></div>
+    <div id="programmes-list">
+      <div class="card" data-prog="1">
+        <div class="card-title">
+          <div class="n">1</div>
+          <input type="text" name="prog_1_title" placeholder="Programme title" style="border:none;background:transparent;font:inherit;font-weight:600;color:#555;font-size:12px;flex:1;outline:none;padding:0;" />
+          <button type="button" class="remove-btn" onclick="removeProg(this)" title="Remove">✕</button>
+        </div>
+        <div class="field">
+          <div class="label">Duration</div>
+          <div class="input"><input type="text" name="prog_1_dur" /></div>
+        </div>
+        <div class="field">
+          <div class="label">Format</div>
+          <div class="input"><div class="pills">
+            <label><input type="checkbox" name="prog_1_fmt" value="in-person" /><span>In person</span></label>
+            <label><input type="checkbox" name="prog_1_fmt" value="virtual" /><span>Virtual</span></label>
+            <label><input type="checkbox" name="prog_1_fmt" value="hybrid" /><span>Hybrid</span></label>
+          </div></div>
+        </div>
+        <div class="field">
+          <div class="label">Target audience</div>
+          <div class="input"><input type="text" name="prog_1_aud" /></div>
+        </div>
+        <div class="field">
+          <div class="label">Pricing</div>
+          <div class="input"><input type="text" name="prog_1_price" /></div>
+        </div>
+        <div class="field">
+          <div class="label">Full description</div>
+          <div class="input"><textarea class="tall" name="prog_1_desc"></textarea></div>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-title"><div class="n">2</div>Team Alignment</div>
-      <div class="field">
-        <div class="label">Duration</div>
-        <div class="input"><input type="text" name="ta_dur" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Format</div>
-        <div class="input"><div class="pills">
-          <label><input type="checkbox" name="ta_fmt" value="in-person" /><span>In person</span></label>
-          <label><input type="checkbox" name="ta_fmt" value="virtual" /><span>Virtual</span></label>
-          <label><input type="checkbox" name="ta_fmt" value="hybrid" /><span>Hybrid</span></label>
-        </div></div>
-      </div>
-      <div class="field">
-        <div class="label">Target audience</div>
-        <div class="input"><input type="text" name="ta_aud" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Pricing</div>
-        <div class="input"><input type="text" name="ta_price" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Full description</div>
-        <div class="input"><textarea class="tall" name="ta_desc"></textarea></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><div class="n">3</div>Team Cohesion</div>
-      <div class="field">
-        <div class="label">Duration</div>
-        <div class="input"><input type="text" name="tc_dur" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Format</div>
-        <div class="input"><div class="pills">
-          <label><input type="checkbox" name="tc_fmt" value="in-person" /><span>In person</span></label>
-          <label><input type="checkbox" name="tc_fmt" value="virtual" /><span>Virtual</span></label>
-          <label><input type="checkbox" name="tc_fmt" value="hybrid" /><span>Hybrid</span></label>
-        </div></div>
-      </div>
-      <div class="field">
-        <div class="label">Target audience</div>
-        <div class="input"><input type="text" name="tc_aud" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Pricing</div>
-        <div class="input"><input type="text" name="tc_price" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Full description</div>
-        <div class="input"><textarea class="tall" name="tc_desc"></textarea></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><div class="n">4</div>Leading Through Narrative</div>
-      <div class="field">
-        <div class="label">Duration</div>
-        <div class="input"><input type="text" name="ltn_dur" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Format</div>
-        <div class="input"><div class="pills">
-          <label><input type="checkbox" name="ltn_fmt" value="in-person" /><span>In person</span></label>
-          <label><input type="checkbox" name="ltn_fmt" value="virtual" /><span>Virtual</span></label>
-          <label><input type="checkbox" name="ltn_fmt" value="hybrid" /><span>Hybrid</span></label>
-        </div></div>
-      </div>
-      <div class="field">
-        <div class="label">Target audience</div>
-        <div class="input"><input type="text" name="ltn_aud" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Pricing</div>
-        <div class="input"><input type="text" name="ltn_price" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Full description</div>
-        <div class="input"><textarea class="tall" name="ltn_desc"></textarea></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><div class="n">5</div>Women in Leadership</div>
-      <div class="field">
-        <div class="label">Duration</div>
-        <div class="input"><input type="text" name="wil_dur" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Format</div>
-        <div class="input"><div class="pills">
-          <label><input type="checkbox" name="wil_fmt" value="in-person" /><span>In person</span></label>
-          <label><input type="checkbox" name="wil_fmt" value="virtual" /><span>Virtual</span></label>
-          <label><input type="checkbox" name="wil_fmt" value="hybrid" /><span>Hybrid</span></label>
-        </div></div>
-      </div>
-      <div class="field">
-        <div class="label">Target audience</div>
-        <div class="input"><input type="text" name="wil_aud" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Pricing</div>
-        <div class="input"><input type="text" name="wil_price" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Full description</div>
-        <div class="input"><textarea class="tall" name="wil_desc"></textarea></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><div class="n">6</div>Allyship</div>
-      <div class="field">
-        <div class="label">Duration</div>
-        <div class="input"><input type="text" name="ally_dur" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Format</div>
-        <div class="input"><div class="pills">
-          <label><input type="checkbox" name="ally_fmt" value="in-person" /><span>In person</span></label>
-          <label><input type="checkbox" name="ally_fmt" value="virtual" /><span>Virtual</span></label>
-          <label><input type="checkbox" name="ally_fmt" value="hybrid" /><span>Hybrid</span></label>
-        </div></div>
-      </div>
-      <div class="field">
-        <div class="label">Target audience</div>
-        <div class="input"><input type="text" name="ally_aud" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Pricing</div>
-        <div class="input"><input type="text" name="ally_price" /></div>
-      </div>
-      <div class="field">
-        <div class="label">Full description</div>
-        <div class="input"><textarea class="tall" name="ally_desc"></textarea></div>
-      </div>
-    </div>
+    <button type="button" class="add-btn" onclick="addProg()">＋ Add a programme</button>
   </div>
 
 
@@ -755,5 +654,52 @@
   </div>
 
 </div>
+<script>
+  var progCount = 1;
+
+  function addProg() {
+    progCount++;
+    var n = progCount;
+    var list = document.getElementById('programmes-list');
+    var card = document.createElement('div');
+    card.className = 'card';
+    card.setAttribute('data-prog', n);
+    card.innerHTML =
+      '<div class="card-title">' +
+        '<div class="n">' + n + '</div>' +
+        '<input type="text" name="prog_' + n + '_title" placeholder="Programme title" style="border:none;background:transparent;font:inherit;font-weight:600;color:#555;font-size:12px;flex:1;outline:none;padding:0;" />' +
+        '<button type="button" class="remove-btn" onclick="removeProg(this)" title="Remove">✕</button>' +
+      '</div>' +
+      '<div class="field"><div class="label">Duration</div><div class="input"><input type="text" name="prog_' + n + '_dur" /></div></div>' +
+      '<div class="field"><div class="label">Format</div><div class="input"><div class="pills">' +
+        '<label><input type="checkbox" name="prog_' + n + '_fmt" value="in-person" /><span>In person</span></label>' +
+        '<label><input type="checkbox" name="prog_' + n + '_fmt" value="virtual" /><span>Virtual</span></label>' +
+        '<label><input type="checkbox" name="prog_' + n + '_fmt" value="hybrid" /><span>Hybrid</span></label>' +
+      '</div></div></div>' +
+      '<div class="field"><div class="label">Target audience</div><div class="input"><input type="text" name="prog_' + n + '_aud" /></div></div>' +
+      '<div class="field"><div class="label">Pricing</div><div class="input"><input type="text" name="prog_' + n + '_price" /></div></div>' +
+      '<div class="field"><div class="label">Full description</div><div class="input"><textarea class="tall" name="prog_' + n + '_desc"></textarea></div></div>';
+    list.appendChild(card);
+    card.querySelector('input[type="text"]').focus();
+    renumberProgs();
+  }
+
+  function removeProg(btn) {
+    var card = btn.closest('.card');
+    var list = document.getElementById('programmes-list');
+    if (list.querySelectorAll('.card').length > 1) {
+      card.remove();
+      renumberProgs();
+    }
+  }
+
+  function renumberProgs() {
+    var cards = document.querySelectorAll('#programmes-list .card');
+    cards.forEach(function(card, i) {
+      var nb = card.querySelector('.n');
+      if (nb) nb.textContent = i + 1;
+    });
+  }
+</script>
 </body>
 </html>

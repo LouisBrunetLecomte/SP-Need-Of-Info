@@ -1,0 +1,5 @@
+{"ts":"2026-05-22T18:24:05.336Z","cmd":"goto","args":"file:///Users/louloubl/AA_DEV/DemandeSara/index.html","origin":"file:///Users/louloubl/AA_DEV/DemandeSara/index.html","durationMs":18,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-22T18:24:08.100Z","cmd":"screenshot","args":"/tmp/sara_form_top.png","origin":"file:///Users/louloubl/AA_DEV/DemandeSara/index.html","durationMs":204,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-22T18:24:10.990Z","cmd":"scroll","args":"","origin":"file:///Users/louloubl/AA_DEV/DemandeSara/index.html","durationMs":2,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-22T18:24:11.071Z","cmd":"screenshot","args":"/tmp/sara_form_programmes.png --selector #programmes-list","origin":"file:///Users/louloubl/AA_DEV/DemandeSara/index.html","durationMs":46,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-22T18:24:17.151Z","cmd":"screenshot","args":"/tmp/sara_add_btn.png --selector .add-btn","origin":"file:///Users/louloubl/AA_DEV/DemandeSara/index.html","durationMs":41,"status":"ok","hasCookies":false,"mode":"launched"}

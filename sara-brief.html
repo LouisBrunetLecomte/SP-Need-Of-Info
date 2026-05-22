@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Brief — Sara Curleigh-Parsons</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      background: #f5f5f5;
+      color: #111;
+      padding: 32px 16px 64px;
+    }
+
+    .wrap { max-width: 720px; margin: 0 auto; }
+
+    h1 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+    .subtitle { color: #666; font-size: 13px; margin-bottom: 32px; }
+
+    .section {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .section-title {
+      padding: 12px 16px;
+      font-weight: 600;
+      font-size: 13px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #fafafa;
+    }
+
+    .field {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      border-bottom: 1px solid #eee;
+    }
+    .field:last-child { border-bottom: none; }
+
+    .label {
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #333;
+      border-right: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .label .hint {
+      font-weight: 400;
+      color: #888;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .input { padding: 10px 12px; display: flex; align-items: flex-start; }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      font-family: inherit;
+      font-size: 13px;
+      color: #111;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 7px 10px;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #555;
+    }
+    textarea { min-height: 72px; }
+    textarea.tall { min-height: 100px; }
+
+    .pills { display: flex; flex-wrap: wrap; gap: 6px; padding: 2px 0; }
+    .pills label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: #444;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+    .pills label:hover { border-color: #888; }
+    .pills input { accent-color: #111; }
+
+    .card {
+      border: 1px solid #eee;
+      border-radius: 6px;
+      margin: 12px 16px;
+      overflow: hidden;
+    }
+    .card:last-child { margin-bottom: 16px; }
+    .card-title {
+      background: #f5f5f5;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #555;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-title .n {
+      background: #333;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .card .field { grid-template-columns: 180px 1fr; }
+    .card .label { padding: 10px 12px; }
+    .card .input { padding: 8px 10px; }
+
+    .group-label {
+      padding: 14px 16px 4px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: #999;
+    }
+
+    .footer { text-align: center; margin-top: 28px; }
+    .footer button {
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 32px;
+      cursor: pointer;
+    }
+    .footer button:hover { background: #333; }
+    .footer p { margin-top: 10px; font-size: 12px; color: #999; }
+
+    @media (max-width: 560px) {
+      .field, .card .field { grid-template-columns: 1fr; }
+      .label { border-right: none; border-bottom: 1px solid #eee; }
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Website Brief — Sara Curleigh-Parsons</h1>
+  <p class="subtitle">Please fill in each field. Priority order: 🔴 first, then 🟠, 🟡, 🟢.</p>
+
+  <!-- ══════════════════════════════════
+       🔴 MUST-HAVE
+  ══════════════════════════════════ -->
+
+  <div class="section">
+    <div class="section-title">🔴 Must-Have — the site cannot go live without this</div>
+
+    <div class="group-label">Identity &amp; Contact</div>
+
+    <div class="field">
+      <div class="label">Professional email<span class="hint">Appears in the navbar, footer, and Contact page</span></div>
+      <div class="input"><input type="email" name="email" /></div>
+    </div>
+    <div class="field">
+      <div class="label">Phone number<span class="hint">Leave blank if you prefer not to display it</span></div>
+      <div class="input"><input type="tel" name="phone" /></div>
+    </div>
+    <div class="field">
+      <div class="label">LinkedIn URL</div>
+      <div class="input"><input type="url" name="linkedin" /></div>
+    </div>
+
+    <div class="group-label">Programmes — all 6 services</div>
+
+    <div class="card">
+      <div class="card-title"><div class="n">1</div>Cultural Intelligence</div>
+      <div class="field">
+        <div class="label">Duration</div>
+        <div class="input"><input type="text" name="ci_dur" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Format</div>
+        <div class="input"><div class="pills">
+          <label><input type="checkbox" name="ci_fmt" value="in-person" /><span>In person</span></label>
+          <label><input type="checkbox" name="ci_fmt" value="virtual" /><span>Virtual</span></label>
+          <label><input type="checkbox" name="ci_fmt" value="hybrid" /><span>Hybrid</span></label>
+        </div></div>
+      </div>
+      <div class="field">
+        <div class="label">Target audience</div>
+        <div class="input"><input type="text" name="ci_aud" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Pricing</div>
+        <div class="input"><input type="text" name="ci_price" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Full description</div>
+        <div class="input"><textarea class="tall" name="ci_desc"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><div class="n">2</div>Team Alignment</div>
+      <div class="field">
+        <div class="label">Duration</div>
+        <div class="input"><input type="text" name="ta_dur" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Format</div>
+        <div class="input"><div class="pills">
+          <label><input type="checkbox" name="ta_fmt" value="in-person" /><span>In person</span></label>
+          <label><input type="checkbox" name="ta_fmt" value="virtual" /><span>Virtual</span></label>
+          <label><input type="checkbox" name="ta_fmt" value="hybrid" /><span>Hybrid</span></label>
+        </div></div>
+      </div>
+      <div class="field">
+        <div class="label">Target audience</div>
+        <div class="input"><input type="text" name="ta_aud" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Pricing</div>
+        <div class="input"><input type="text" name="ta_price" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Full description</div>
+        <div class="input"><textarea class="tall" name="ta_desc"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><div class="n">3</div>Team Cohesion</div>
+      <div class="field">
+        <div class="label">Duration</div>
+        <div class="input"><input type="text" name="tc_dur" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Format</div>
+        <div class="input"><div class="pills">
+          <label><input type="checkbox" name="tc_fmt" value="in-person" /><span>In person</span></label>
+          <label><input type="checkbox" name="tc_fmt" value="virtual" /><span>Virtual</span></label>
+          <label><input type="checkbox" name="tc_fmt" value="hybrid" /><span>Hybrid</span></label>
+        </div></div>
+      </div>
+      <div class="field">
+        <div class="label">Target audience</div>
+        <div class="input"><input type="text" name="tc_aud" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Pricing</div>
+        <div class="input"><input type="text" name="tc_price" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Full description</div>
+        <div class="input"><textarea class="tall" name="tc_desc"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><div class="n">4</div>Leading Through Narrative</div>
+      <div class="field">
+        <div class="label">Duration</div>
+        <div class="input"><input type="text" name="ltn_dur" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Format</div>
+        <div class="input"><div class="pills">
+          <label><input type="checkbox" name="ltn_fmt" value="in-person" /><span>In person</span></label>
+          <label><input type="checkbox" name="ltn_fmt" value="virtual" /><span>Virtual</span></label>
+          <label><input type="checkbox" name="ltn_fmt" value="hybrid" /><span>Hybrid</span></label>
+        </div></div>
+      </div>
+      <div class="field">
+        <div class="label">Target audience</div>
+        <div class="input"><input type="text" name="ltn_aud" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Pricing</div>
+        <div class="input"><input type="text" name="ltn_price" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Full description</div>
+        <div class="input"><textarea class="tall" name="ltn_desc"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><div class="n">5</div>Women in Leadership</div>
+      <div class="field">
+        <div class="label">Duration</div>
+        <div class="input"><input type="text" name="wil_dur" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Format</div>
+        <div class="input"><div class="pills">
+          <label><input type="checkbox" name="wil_fmt" value="in-person" /><span>In person</span></label>
+          <label><input type="checkbox" name="wil_fmt" value="virtual" /><span>Virtual</span></label>
+          <label><input type="checkbox" name="wil_fmt" value="hybrid" /><span>Hybrid</span></label>
+        </div></div>
+      </div>
+      <div class="field">
+        <div class="label">Target audience</div>
+        <div class="input"><input type="text" name="wil_aud" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Pricing</div>
+        <div class="input"><input type="text" name="wil_price" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Full description</div>
+        <div class="input"><textarea class="tall" name="wil_desc"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><div class="n">6</div>Allyship</div>
+      <div class="field">
+        <div class="label">Duration</div>
+        <div class="input"><input type="text" name="ally_dur" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Format</div>
+        <div class="input"><div class="pills">
+          <label><input type="checkbox" name="ally_fmt" value="in-person" /><span>In person</span></label>
+          <label><input type="checkbox" name="ally_fmt" value="virtual" /><span>Virtual</span></label>
+          <label><input type="checkbox" name="ally_fmt" value="hybrid" /><span>Hybrid</span></label>
+        </div></div>
+      </div>
+      <div class="field">
+        <div class="label">Target audience</div>
+        <div class="input"><input type="text" name="ally_aud" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Pricing</div>
+        <div class="input"><input type="text" name="ally_price" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Full description</div>
+        <div class="input"><textarea class="tall" name="ally_desc"></textarea></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════
+       🟠 IMPORTANT
+  ══════════════════════════════════ -->
+
+  <div class="section">
+    <div class="section-title">🟠 Important — the site looks empty without this</div>
+
+    <div class="group-label">Homepage — Key Figures</div>
+
+    <div class="field">
+      <div class="label">Key figure #1<span class="hint">We already have "16+ years" — 3 more needed</span></div>
+      <div class="input"><input type="text" name="fig1" /></div>
+    </div>
+    <div class="field">
+      <div class="label">Key figure #2</div>
+      <div class="input"><input type="text" name="fig2" /></div>
+    </div>
+    <div class="field">
+      <div class="label">Key figure #3</div>
+      <div class="input"><input type="text" name="fig3" /></div>
+    </div>
+
+    <div class="group-label">Homepage — Testimonials</div>
+
+    <div class="card">
+      <div class="card-title">💬 Testimonial 1</div>
+      <div class="field">
+        <div class="label">Exact quote</div>
+        <div class="input"><textarea name="t1_quote"></textarea></div>
+      </div>
+      <div class="field">
+        <div class="label">Name + job title</div>
+        <div class="input"><input type="text" name="t1_name" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Company</div>
+        <div class="input"><input type="text" name="t1_co" /></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">💬 Testimonial 2</div>
+      <div class="field">
+        <div class="label">Exact quote</div>
+        <div class="input"><textarea name="t2_quote"></textarea></div>
+      </div>
+      <div class="field">
+        <div class="label">Name + job title</div>
+        <div class="input"><input type="text" name="t2_name" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Company</div>
+        <div class="input"><input type="text" name="t2_co" /></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">💬 Testimonial 3</div>
+      <div class="field">
+        <div class="label">Exact quote</div>
+        <div class="input"><textarea name="t3_quote"></textarea></div>
+      </div>
+      <div class="field">
+        <div class="label">Name + job title</div>
+        <div class="input"><input type="text" name="t3_name" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Company</div>
+        <div class="input"><input type="text" name="t3_co" /></div>
+      </div>
+    </div>
+
+    <div class="field" style="margin-top:4px;">
+      <div class="label">Hero background photo<span class="hint">Currently a generic stock image</span></div>
+      <div class="input"><div class="pills">
+        <label><input type="radio" name="hero" value="yes" /><span>Yes, I'll send one</span></label>
+        <label><input type="radio" name="hero" value="no" /><span>Keep stock image</span></label>
+        <label><input type="radio" name="hero" value="later" /><span>Decide later</span></label>
+      </div></div>
+    </div>
+
+    <div class="group-label">About Page</div>
+
+    <div class="field">
+      <div class="label">Headshot photo<span class="hint">Currently shows initials as a placeholder</span></div>
+      <div class="input"><div class="pills">
+        <label><input type="radio" name="headshot" value="yes" /><span>Yes, I'll send one</span></label>
+        <label><input type="radio" name="headshot" value="no" /><span>Not for now</span></label>
+      </div></div>
+    </div>
+    <div class="field">
+      <div class="label">Formal certifications<span class="hint">ICF, CIPD, official accreditations</span></div>
+      <div class="input"><textarea name="certs"></textarea></div>
+    </div>
+    <div class="field">
+      <div class="label">Full biography</div>
+      <div class="input"><textarea class="tall" name="bio"></textarea></div>
+    </div>
+    <div class="field">
+      <div class="label">Personal quote</div>
+      <div class="input"><textarea name="quote"></textarea></div>
+    </div>
+
+    <div class="group-label">Career Timeline — 4 of 6 steps are blank</div>
+
+    <div class="card">
+      <div class="card-title">⏱ Step 1 — 2009</div>
+      <div class="field">
+        <div class="label">Role</div>
+        <div class="input"><input type="text" name="tl1_role" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Organisation</div>
+        <div class="input"><input type="text" name="tl1_org" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Short description</div>
+        <div class="input"><textarea name="tl1_desc"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⏱ Step 2</div>
+      <div class="field">
+        <div class="label">Period</div>
+        <div class="input"><input type="text" name="tl2_period" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Role</div>
+        <div class="input"><input type="text" name="tl2_role" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Organisation</div>
+        <div class="input"><input type="text" name="tl2_org" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Short description</div>
+        <div class="input"><textarea name="tl2_desc"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⏱ Step 3</div>
+      <div class="field">
+        <div class="label">Period</div>
+        <div class="input"><input type="text" name="tl3_period" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Role</div>
+        <div class="input"><input type="text" name="tl3_role" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Organisation</div>
+        <div class="input"><input type="text" name="tl3_org" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Short description</div>
+        <div class="input"><textarea name="tl3_desc"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⏱ Step 4</div>
+      <div class="field">
+        <div class="label">Period</div>
+        <div class="input"><input type="text" name="tl4_period" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Role</div>
+        <div class="input"><input type="text" name="tl4_role" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Organisation</div>
+        <div class="input"><input type="text" name="tl4_org" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Short description</div>
+        <div class="input"><textarea name="tl4_desc"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⏱ Step 5</div>
+      <div class="field">
+        <div class="label">Period</div>
+        <div class="input"><input type="text" name="tl5_period" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Role</div>
+        <div class="input"><input type="text" name="tl5_role" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Organisation</div>
+        <div class="input"><input type="text" name="tl5_org" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Short description</div>
+        <div class="input"><textarea name="tl5_desc"></textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⏱ Step 6 — Today (Rusholme)</div>
+      <div class="field">
+        <div class="label">Since</div>
+        <div class="input"><input type="text" name="tl6_period" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Short description</div>
+        <div class="input"><textarea name="tl6_desc"></textarea></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════
+       🟡 NICE TO HAVE
+  ══════════════════════════════════ -->
+
+  <div class="section">
+    <div class="section-title">🟡 Nice to Have — noticeably improves the site</div>
+
+    <div class="group-label">Booking</div>
+
+    <div class="field">
+      <div class="label">Preferred booking method</div>
+      <div class="input"><div class="pills">
+        <label><input type="radio" name="booking" value="form" /><span>"Book a Session" form (current)</span></label>
+        <label><input type="radio" name="booking" value="calendly" /><span>Calendly link</span></label>
+        <label><input type="radio" name="booking" value="contact" /><span>Just "Contact us"</span></label>
+      </div></div>
+    </div>
+    <div class="field">
+      <div class="label">Calendly URL</div>
+      <div class="input"><input type="url" name="calendly" /></div>
+    </div>
+    <div class="field">
+      <div class="label">Which programmes can be booked online?</div>
+      <div class="input"><textarea name="bookable"></textarea></div>
+    </div>
+    <div class="field">
+      <div class="label">Display time zone</div>
+      <div class="input"><input type="text" name="tz" /></div>
+    </div>
+
+    <div class="group-label">Additional Content</div>
+
+    <div class="field">
+      <div class="label">Action photos<span class="hint">Workshop, facilitation, group settings</span></div>
+      <div class="input"><div class="pills">
+        <label><input type="radio" name="photos" value="yes" /><span>Yes, I'll send some</span></label>
+        <label><input type="radio" name="photos" value="no" /><span>No, keep illustrations</span></label>
+      </div></div>
+    </div>
+    <div class="field">
+      <div class="label">Case studies<span class="hint">With client approval</span></div>
+      <div class="input"><textarea class="tall" name="cases"></textarea></div>
+    </div>
+    <div class="field">
+      <div class="label">Site languages</div>
+      <div class="input"><div class="pills">
+        <label><input type="checkbox" name="lang" value="en" /><span>English (current)</span></label>
+        <label><input type="checkbox" name="lang" value="fr" /><span>French</span></label>
+        <label><input type="checkbox" name="lang" value="ar" /><span>Arabic</span></label>
+      </div></div>
+    </div>
+    <div class="field">
+      <div class="label">Publications / talks</div>
+      <div class="input"><textarea name="pubs"></textarea></div>
+    </div>
+    <div class="field">
+      <div class="label">Academic background</div>
+      <div class="input"><textarea name="edu"></textarea></div>
+    </div>
+
+    <div class="group-label">Legal &amp; GDPR</div>
+
+    <div class="field">
+      <div class="label">Privacy policy<span class="hint">Required if the form collects personal data</span></div>
+      <div class="input"><div class="pills">
+        <label><input type="radio" name="privacy" value="create" /><span>Please create one</span></label>
+        <label><input type="radio" name="privacy" value="have" /><span>I already have one</span></label>
+        <label><input type="radio" name="privacy" value="no" /><span>Not needed</span></label>
+      </div></div>
+    </div>
+    <div class="field">
+      <div class="label">Rusholme Ltd — still UK registered?</div>
+      <div class="input"><div class="pills">
+        <label><input type="radio" name="uk_reg" value="yes" /><span>Yes</span></label>
+        <label><input type="radio" name="uk_reg" value="no" /><span>No</span></label>
+      </div></div>
+    </div>
+    <div class="field">
+      <div class="label">Company registration number</div>
+      <div class="input"><input type="text" name="co_num" /></div>
+    </div>
+    <div class="field">
+      <div class="label">Cookie banner</div>
+      <div class="input"><div class="pills">
+        <label><input type="radio" name="cookies" value="yes" /><span>Yes, add one</span></label>
+        <label><input type="radio" name="cookies" value="no" /><span>No</span></label>
+      </div></div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════
+       🟢 POLISH
+  ══════════════════════════════════ -->
+
+  <div class="section">
+    <div class="section-title">🟢 Polish — finishing details</div>
+
+    <div class="field">
+      <div class="label">Logo / favicon<span class="hint">Currently a generic placeholder</span></div>
+      <div class="input"><div class="pills">
+        <label><input type="radio" name="logo" value="yes" /><span>Yes, I'll send it</span></label>
+        <label><input type="radio" name="logo" value="monogram" /><span>Keep "R" monogram</span></label>
+        <label><input type="radio" name="logo" value="create" /><span>To be created</span></label>
+      </div></div>
+    </div>
+    <div class="field">
+      <div class="label">Domain name</div>
+      <div class="input"><input type="text" name="domain" /></div>
+    </div>
+    <div class="field">
+      <div class="label">Colours &amp; fonts<span class="hint">Current direction: warm cream + antique gold</span></div>
+      <div class="input"><div class="pills">
+        <label><input type="radio" name="colors" value="yes" /><span>I like it</span></label>
+        <label><input type="radio" name="colors" value="adjust" /><span>I'd like to adjust</span></label>
+      </div></div>
+    </div>
+    <div class="field">
+      <div class="label">Colour / font notes</div>
+      <div class="input"><textarea name="color_notes"></textarea></div>
+    </div>
+    <div class="field">
+      <div class="label">Tagline<span class="hint">Currently: "Leadership Development &amp; Executive Coaching"</span></div>
+      <div class="input"><div class="pills">
+        <label><input type="radio" name="tagline" value="ok" /><span>Works for me</span></label>
+        <label><input type="radio" name="tagline" value="change" /><span>I'd like something different</span></label>
+      </div></div>
+    </div>
+    <div class="field">
+      <div class="label">New tagline</div>
+      <div class="input"><input type="text" name="tagline_new" /></div>
+    </div>
+    <div class="field">
+      <div class="label">Additional social media<span class="hint">Beyond LinkedIn</span></div>
+      <div class="input"><div class="pills">
+        <label><input type="checkbox" name="social" value="twitter" /><span>Twitter / X</span></label>
+        <label><input type="checkbox" name="social" value="instagram" /><span>Instagram</span></label>
+        <label><input type="checkbox" name="social" value="none" /><span>None</span></label>
+      </div></div>
+    </div>
+    <div class="field">
+      <div class="label">Twitter / X URL</div>
+      <div class="input"><input type="url" name="twitter" /></div>
+    </div>
+    <div class="field">
+      <div class="label">Instagram URL</div>
+      <div class="input"><input type="url" name="instagram" /></div>
+    </div>
+    <div class="field">
+      <div class="label">Footer address<span class="hint">Currently "Doha, Qatar"</span></div>
+      <div class="input"><div class="pills">
+        <label><input type="radio" name="addr" value="simple" /><span>Keep "Doha, Qatar"</span></label>
+        <label><input type="radio" name="addr" value="full" /><span>Full address</span></label>
+      </div></div>
+    </div>
+    <div class="field">
+      <div class="label">Full address</div>
+      <div class="input"><textarea name="addr_full"></textarea></div>
+    </div>
+    <div class="field">
+      <div class="label">Any other notes</div>
+      <div class="input"><textarea class="tall" name="notes"></textarea></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button type="button" onclick="window.print()">Print / Save as PDF</button>
+    <p>Fill it in on screen, then print to PDF and send it back.</p>
+  </div>
+
+</div>
+</body>
+</html>

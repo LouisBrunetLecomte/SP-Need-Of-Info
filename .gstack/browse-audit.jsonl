@@ -3,3 +3,7 @@
 {"ts":"2026-05-22T18:24:10.990Z","cmd":"scroll","args":"","origin":"file:///Users/louloubl/AA_DEV/DemandeSara/index.html","durationMs":2,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-05-22T18:24:11.071Z","cmd":"screenshot","args":"/tmp/sara_form_programmes.png --selector #programmes-list","origin":"file:///Users/louloubl/AA_DEV/DemandeSara/index.html","durationMs":46,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-05-22T18:24:17.151Z","cmd":"screenshot","args":"/tmp/sara_add_btn.png --selector .add-btn","origin":"file:///Users/louloubl/AA_DEV/DemandeSara/index.html","durationMs":41,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-22T18:32:59.331Z","cmd":"goto","args":"https://rusholme.org/","origin":"https://rusholme.org/","durationMs":772,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-22T18:33:02.099Z","cmd":"screenshot","args":"/tmp/rusholme-home.png","origin":"https://rusholme.org/","durationMs":294,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-22T18:33:08.452Z","cmd":"responsive","args":"/tmp/rusholme","origin":"https://rusholme.org/","durationMs":533,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-22T18:33:13.163Z","cmd":"text","args":"","origin":"https://rusholme.org/","durationMs":3,"status":"ok","hasCookies":false,"mode":"launched"}

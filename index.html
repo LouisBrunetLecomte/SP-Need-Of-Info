@@ -206,10 +206,6 @@
   <h1>Website Brief — Sara Curleigh-Parsons</h1>
   <p class="subtitle">Please fill in each field. Priority order: 🔴 first, then 🟠, 🟡, 🟢.</p>
 
-  <!-- ══════════════════════════════════
-       🔴 MUST-HAVE
-  ══════════════════════════════════ -->
-
   <div class="section">
     <div class="section-title">🔴 Must-Have — the site cannot go live without this</div>
 
@@ -268,17 +264,13 @@
   </div>
 
 
-  <!-- ══════════════════════════════════
-       🟠 IMPORTANT
-  ══════════════════════════════════ -->
-
   <div class="section">
     <div class="section-title">🟠 Important — the site looks empty without this</div>
 
     <div class="group-label">Homepage — Key Figures</div>
 
     <div class="field">
-      <div class="label">Key figure #1<span class="hint">We already have "16+ years" — 3 more needed</span></div>
+      <div class="label">Key figure #1</div>
       <div class="input"><input type="text" name="fig1" /></div>
     </div>
     <div class="field">
@@ -341,7 +333,7 @@
     </div>
 
     <div class="field" style="margin-top:4px;">
-      <div class="label">Hero background photo<span class="hint">Currently a generic stock image</span></div>
+      <div class="label">Hero background photo</div>
       <div class="input"><div class="pills">
         <label><input type="radio" name="hero" value="yes" /><span>Yes, I'll send one</span></label>
         <label><input type="radio" name="hero" value="no" /><span>Keep stock image</span></label>
@@ -352,7 +344,7 @@
     <div class="group-label">About Page</div>
 
     <div class="field">
-      <div class="label">Headshot photo<span class="hint">Currently shows initials as a placeholder</span></div>
+      <div class="label">Headshot photo</div>
       <div class="input"><div class="pills">
         <label><input type="radio" name="headshot" value="yes" /><span>Yes, I'll send one</span></label>
         <label><input type="radio" name="headshot" value="no" /><span>Not for now</span></label>
@@ -371,10 +363,14 @@
       <div class="input"><textarea name="quote"></textarea></div>
     </div>
 
-    <div class="group-label">Career Timeline — 4 of 6 steps are blank</div>
+    <div class="group-label">Career Timeline</div>
 
     <div class="card">
-      <div class="card-title">Step 1 — 2009</div>
+      <div class="card-title">Step 1</div>
+      <div class="field">
+        <div class="label">Period</div>
+        <div class="input"><input type="text" name="tl1_period" /></div>
+      </div>
       <div class="field">
         <div class="label">Role</div>
         <div class="input"><input type="text" name="tl1_role" /></div>
@@ -470,10 +466,18 @@
     </div>
 
     <div class="card">
-      <div class="card-title">Step 6 — Today (Rusholme)</div>
+      <div class="card-title">Step 6</div>
       <div class="field">
-        <div class="label">Since</div>
+        <div class="label">Period</div>
         <div class="input"><input type="text" name="tl6_period" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Role</div>
+        <div class="input"><input type="text" name="tl6_role" /></div>
+      </div>
+      <div class="field">
+        <div class="label">Organisation</div>
+        <div class="input"><input type="text" name="tl6_org" /></div>
       </div>
       <div class="field">
         <div class="label">Short description</div>
@@ -483,10 +487,6 @@
   </div>
 
 
-  <!-- ══════════════════════════════════
-       🟡 NICE TO HAVE
-  ══════════════════════════════════ -->
-
   <div class="section">
     <div class="section-title">🟡 Nice to Have — noticeably improves the site</div>
 
@@ -495,7 +495,7 @@
     <div class="field">
       <div class="label">Preferred booking method</div>
       <div class="input"><div class="pills">
-        <label><input type="radio" name="booking" value="form" /><span>"Book a Session" form (current)</span></label>
+        <label><input type="radio" name="booking" value="form" /><span>"Book a Session" form</span></label>
         <label><input type="radio" name="booking" value="calendly" /><span>Calendly link</span></label>
         <label><input type="radio" name="booking" value="contact" /><span>Just "Contact us"</span></label>
       </div></div>
@@ -529,7 +529,7 @@
     <div class="field">
       <div class="label">Site languages</div>
       <div class="input"><div class="pills">
-        <label><input type="checkbox" name="lang" value="en" /><span>English (current)</span></label>
+        <label><input type="checkbox" name="lang" value="en" /><span>English</span></label>
         <label><input type="checkbox" name="lang" value="fr" /><span>French</span></label>
         <label><input type="checkbox" name="lang" value="ar" /><span>Arabic</span></label>
       </div></div>
@@ -574,15 +574,11 @@
   </div>
 
 
-  <!-- ══════════════════════════════════
-       🟢 POLISH
-  ══════════════════════════════════ -->
-
   <div class="section">
     <div class="section-title">🟢 Polish — finishing details</div>
 
     <div class="field">
-      <div class="label">Logo / favicon<span class="hint">Currently a generic placeholder</span></div>
+      <div class="label">Logo / favicon</div>
       <div class="input"><div class="pills">
         <label><input type="radio" name="logo" value="yes" /><span>Yes, I'll send it</span></label>
         <label><input type="radio" name="logo" value="monogram" /><span>Keep "R" monogram</span></label>
@@ -594,9 +590,9 @@
       <div class="input"><input type="text" name="domain" /></div>
     </div>
     <div class="field">
-      <div class="label">Colours &amp; fonts<span class="hint">Current direction: warm cream + antique gold</span></div>
+      <div class="label">Colours &amp; fonts</div>
       <div class="input"><div class="pills">
-        <label><input type="radio" name="colors" value="yes" /><span>I like it</span></label>
+        <label><input type="radio" name="colors" value="yes" /><span>I like the proposed direction</span></label>
         <label><input type="radio" name="colors" value="adjust" /><span>I'd like to adjust</span></label>
       </div></div>
     </div>
@@ -605,7 +601,7 @@
       <div class="input"><textarea name="color_notes"></textarea></div>
     </div>
     <div class="field">
-      <div class="label">Tagline<span class="hint">Currently: "Leadership Development &amp; Executive Coaching"</span></div>
+      <div class="label">Tagline</div>
       <div class="input"><div class="pills">
         <label><input type="radio" name="tagline" value="ok" /><span>Works for me</span></label>
         <label><input type="radio" name="tagline" value="change" /><span>I'd like something different</span></label>
@@ -632,9 +628,9 @@
       <div class="input"><input type="url" name="instagram" /></div>
     </div>
     <div class="field">
-      <div class="label">Footer address<span class="hint">Currently "Doha, Qatar"</span></div>
+      <div class="label">Footer address</div>
       <div class="input"><div class="pills">
-        <label><input type="radio" name="addr" value="simple" /><span>Keep "Doha, Qatar"</span></label>
+        <label><input type="radio" name="addr" value="simple" /><span>City only (e.g. Doha, Qatar)</span></label>
         <label><input type="radio" name="addr" value="full" /><span>Full address</span></label>
       </div></div>
     </div>
